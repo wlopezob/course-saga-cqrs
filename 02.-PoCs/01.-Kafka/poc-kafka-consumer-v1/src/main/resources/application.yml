@@ -1,0 +1,17 @@
+
+server:
+  port: 9083
+spring:
+  application:
+    name: poc-kafka-consumer-v1
+
+
+# Kafka
+
+kafka:
+#  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  bootstrap-servers: localhost:9092
+  topic: 
+     topic-pedido-resumen: topic-pedido
+  group:
+     group-pedido-id: group-pedido-id

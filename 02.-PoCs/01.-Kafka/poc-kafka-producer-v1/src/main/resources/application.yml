@@ -1,0 +1,14 @@
+
+server:
+  port: 9081
+spring:
+  application:
+    name: poc-kafka-producer-v1
+
+# Kafka
+
+kafka:
+#  bootstrap-servers: localhost:19092,localhost:29092,localhost:39092
+  bootstrap-servers: localhost:9092
+  topic: 
+     topic-pedido-resumen: topic-pedido

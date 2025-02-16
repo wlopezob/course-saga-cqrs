@@ -1,0 +1,13 @@
+server:
+  port: 9085
+  
+spring:
+  application:
+    name: poc-redis-admin-v1
+
+  data: 
+   redis:
+     database: 0
+     host: localhost
+     port: 6379
+     timeout: 60

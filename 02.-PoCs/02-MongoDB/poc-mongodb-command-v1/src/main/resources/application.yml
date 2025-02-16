@@ -1,0 +1,17 @@
+server:
+  port: 9083
+spring:
+  application:
+    name: poc-mongodb-command-v1
+
+  data: 
+    mongodb:
+      database: ms-reporte-pedidos
+      username: root
+      password: example
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      auto-index-creation: true
+#      write-concern: NORMAL
+#      replica-set: replica_set_one

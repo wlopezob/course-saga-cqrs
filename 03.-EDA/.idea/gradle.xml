@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/1.ms-administracion-server-config" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/1.ms-administracion-server-config" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/10.ms-autorizacion-evaluacion-automatica-pedidos" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/10.ms-autorizacion-evaluacion-automatica-pedidos" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/11.ms-autorizacion-saga-pedidos" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/11.ms-autorizacion-saga-pedidos" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/2.ms-infraestructure-server-registry" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/2.ms-infraestructure-server-registry" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/3.1ms-infraestructure-api-gateway" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/3.1ms-infraestructure-api-gateway" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/3.ms-infraestructure-server-admin" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/3.ms-infraestructure-server-admin" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/4.1.ms-negocio-gestion-pedidos" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/4.1.ms-negocio-gestion-pedidos" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/4.1ms-negocio-gestion-pedidos" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/4.1ms-negocio-gestion-pedidos" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/4.2.ms-negocio-gestion-productos" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/4.2.ms-negocio-gestion-productos" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/4.ms-negocio-gestion-cliente" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/4.ms-negocio-gestion-cliente" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/5.ms-integracion-message-mail" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/5.ms-integracion-message-mail" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/6.ms-integracion-message-producer" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/6.ms-integracion-message-producer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/7.ms-integracion-message-command" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/7.ms-integracion-message-command" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/8.ms-integracion-message-consumer" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/8.ms-integracion-message-consumer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/9.ms-integracion-message-query-details" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/9.ms-integracion-message-query-details" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
