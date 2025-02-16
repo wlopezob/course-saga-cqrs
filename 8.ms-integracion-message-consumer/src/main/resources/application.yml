@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ms-integracion-message-consumer
+  
+  config:
+    import: optional:configserver:http://localhost:8888
+
+#  cloud:
+#    loadbalancer:
+#      health-check:
+#       interval: 15s
+feign:
+  hystrix:
+    enabled: false

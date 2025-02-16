@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/03.-EDA.iml" filepath="$PROJECT_DIR$/.idea/03.-EDA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ms-integracion-message-mail.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ms-integracion-message-mail.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ms-integracion-message-producer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ms-integracion-message-producer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ms-negocio-gestion-cliente.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ms-negocio-gestion-cliente.main.iml" />
+    </modules>
+  </component>
+</project>

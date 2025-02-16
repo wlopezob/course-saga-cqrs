@@ -1,0 +1,1938 @@
+{
+	"info": {
+		"_postman_id": "eacad271-8692-4080-892e-6f7442a2e12c",
+		"name": "CURS-000261-ARQMSEDA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17675229"
+	},
+	"item": [
+		{
+			"name": "negocio",
+			"item": [
+				{
+					"name": "01.-ms-negocio-gestion-producto",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/v1/productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"v1",
+										"productos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actuator",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/actuator",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findbyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/v1/productos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"v1",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findbyIds",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/v1/productos/ids?ids=1&ids=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"v1",
+										"productos",
+										"ids"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "1"
+										},
+										{
+											"key": "ids",
+											"value": "2"
+										},
+										{
+											"key": "ids",
+											"value": "3",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-stock",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/v1/productos/update-stock?stock=-1&id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"v1",
+										"productos",
+										"update-stock"
+									],
+									"query": [
+										{
+											"key": "stock",
+											"value": "-1"
+										},
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-reserva",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/v1/productos/update-reserva?reserva=1&id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"v1",
+										"productos",
+										"update-reserva"
+									],
+									"query": [
+										{
+											"key": "reserva",
+											"value": "1"
+										},
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"LENOVO Ideapad Y9000\",\r\n    \"descripcion\": \"Laptop  LENOVO 48RAM Disco sólido 1MB\",\r\n    \"precio\": 1200.0,\r\n   \"stockMinimo\": 2,\r\n    \"stockMaximo\": 5,\r\n    \"categoria\": {\r\n        \"id\": 1\r\n    },\r\n    \"estado\": \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/v1/productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"v1",
+										"productos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "02.-ms-negocio-gestion-cliente",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/v1/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findbyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/v1/clientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"v1",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"razonSocial\": \"GALAXY BUSINESS v8\",\r\n    \"ruc\": \"20544987297\",\r\n    \"direccion\": \"AV. AREQUIPA 330 OFICINA 8082 - LIMA CERDADO\",\r\n    \"telefono\": \"456-4575\",\r\n    \"correo\": \"demo@galaxy.edu.pe\",\r\n    \"estado\": \"1\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/v1/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-negocio-gestion-cliente_backup",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/v1/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findbyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/v1/clientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"v1",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"razonSocial\": \"GALAXY BUSINESS\",\r\n    \"ruc\": \"20544987291\",\r\n    \"direccion\": \"AV. AREQUIPA 330 OFICINA 8082 - LIMA CERDADO\",\r\n    \"telefono\": \"456-4575\",\r\n    \"correo\": \"contacto@galaxy.com.pe\",\r\n    \"estado\": \"1\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/v1/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "03.-ms-negocio-gestion-pedidos",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8084/v1/pedidos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"v1",
+										"pedidos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findbyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8084/v1/pedidos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"v1",
+										"pedidos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"glosa\": \"Pedido demo v3\",\r\n    \"fechaEntrega\": \"2024-08-10\",\r\n    \"fechaPedido\": \"2024-08-12\",\r\n    \"descuento\": 0.0,\r\n    \"situacion\": 0,\r\n    \"cliente\": {\r\n        \"id\": 2\r\n    },\r\n     \"items\": [\r\n        {\r\n            \"cantidad\": 1,\r\n            \"descuento\": 0.0,\r\n            \"producto\": {\r\n                \"id\": 1\r\n            }\r\n\r\n        },\r\n         {\r\n            \"cantidad\": 1,\r\n            \"descuento\": 0.0,\r\n            \"producto\": {\r\n                \"id\": 2\r\n            }\r\n\r\n        }\r\n     ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/v1/pedidos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"v1",
+										"pedidos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "06.-ms-integracion-message-producer",
+					"item": [
+						{
+							"name": "data-test",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/v1/pedidos/producer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"v1",
+										"pedidos",
+										"producer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send-message",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idPedido\": 1,\r\n    \"cliente\": \"20544987304 -  Comercial Hermanos Casa S.A.\",\r\n    \"glosa\": \"Pedido de equipos de cómputo\",\r\n    \"fechaRegistro\": \"2025-01-04\",\r\n    \"subTotal\": 10000.0,\r\n    \"igv\": 1800.0,\r\n    \"total\": 11800.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/v1/pedidos/producer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"v1",
+										"pedidos",
+										"producer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send-message-2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idPedido\": 2,\r\n    \"cliente\": \"20544987304 -  Comercial Hermanos Casa S.A.\",\r\n    \"glosa\": \"Pedido de equipos de oficina\",\r\n    \"fechaRegistro\": \"2025-01-04\",\r\n    \"subTotal\": 1000.0,\r\n    \"igv\": 180.0,\r\n    \"total\": 1180.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/v1/pedidos/producer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"v1",
+										"pedidos",
+										"producer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "08.-ms-integracion-message-command",
+					"item": [
+						{
+							"name": "data-test",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/v1/pedidos/command",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"v1",
+										"pedidos",
+										"command"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save-message",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idPedido\": 1,\r\n    \"cliente\": \"20544987304 -  Comercial Hermanos Casa S.A.\",\r\n    \"glosa\": \"Pedido de equipos de cómputo\",\r\n    \"fechaRegistro\": \"2025-01-04\",\r\n    \"subTotal\": 10000.0,\r\n    \"igv\": 1800.0,\r\n    \"total\": 11800.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/v1/pedidos/command",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"v1",
+										"pedidos",
+										"command"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "09.-ms-integracion-message-query-details",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/v1/pedidos/query",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"v1",
+										"pedidos",
+										"query"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "by-glosa",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/v1/pedidos/query/by-glosa?glosa=v3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"v1",
+										"pedidos",
+										"query",
+										"by-glosa"
+									],
+									"query": [
+										{
+											"key": "glosa",
+											"value": "v3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "infraestructura",
+			"item": [
+				{
+					"name": "ms-infraestructure-server-config",
+					"item": [
+						{
+							"name": "01.- actuator",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/actuator",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "01.- actuator/health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/actuator/health",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"actuator",
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-negocio-gestion-cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-negocio-gestion-clientes/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-negocio-gestion-clientes",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-integracion-message-mail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-integracion-message-mail/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-integracion-message-mail",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-negocio-gestion-cliente_backup",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-negocio-gestion-clientes_backup/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-negocio-gestion-clientes_backup",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-infraestructure-server-registry",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-infraestructure-server-registry/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-infraestructure-server-registry",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-negocio-gestion-productos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-negocio-gestion-productos/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-negocio-gestion-productos",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-negocio-gestion-productos_oracle",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-negocio-gestion-productos_oracle/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-negocio-gestion-productos_oracle",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-negocio-gestion-pedidos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-negocio-gestion-pedidos/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-negocio-gestion-pedidos",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-infraestructure-server-admin",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-infraestructure-server-admin/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-infraestructure-server-admin",
+										"default"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-administracion-api-gateway",
+					"item": [
+						{
+							"name": "api-gateway",
+							"item": [
+								{
+									"name": "actuator",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/actuator",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"actuator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "actuator-gateway",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/actuator/gateway",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"actuator",
+												"gateway"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "actuator-gateway-routes",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/actuator/gateway/routes",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"actuator",
+												"gateway",
+												"routes"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "microservicios-internos",
+							"item": [
+								{
+									"name": "ms-negocio-gestion-clientes-gateway",
+									"item": [
+										{
+											"name": "findAll",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/MS-NEGOCIO-GESTION-CLIENTES/v1/clientes",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"MS-NEGOCIO-GESTION-CLIENTES",
+														"v1",
+														"clientes"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "findById",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-clientes/api/v1/clientes/1",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-clientes",
+														"api",
+														"v1",
+														"clientes",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "findByRazonSocial",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes/by-razonSocial?razonSocial=CLARO",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes",
+														"by-razonSocial"
+													],
+													"query": [
+														{
+															"key": "razonSocial",
+															"value": "CLARO"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "findByRuc",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes/by-ruc?ruc=20544987258",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes",
+														"by-ruc"
+													],
+													"query": [
+														{
+															"key": "ruc",
+															"value": "20544987258"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "save",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n        \"razonSocial\": \"CLARO EMPRESAS v3\",\r\n        \"ruc\": \"20544987260\",\r\n        \"direccion\": \"AV. LARCO 238-SAN ISIDRO\",\r\n        \"telefono\": \"456-4575\",\r\n        \"correo\": \"CONTACTO@CLARO.COM.PE\",\r\n        \"estado\": \"1\"\r\n    }",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n \"razonSocial\": \"CLARO EMPRESAS v3.1\",\r\n        \"ruc\": \"20544987260\",\r\n        \"direccion\": \"AV. LARCO 238-SAN ISIDRO\",\r\n        \"telefono\": \"456-4575\",\r\n        \"correo\": \"CONTACTO@CLARO.COM.PE\",\r\n        \"estado\": \"1\"\r\n    }",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes/4",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes",
+														"4"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "delete",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes/4",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes",
+														"4"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "ms-negocio-gestion-clientes-gateway-custom",
+									"item": [
+										{
+											"name": "findAll",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-clientes/v1/clientes",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-clientes",
+														"v1",
+														"clientes"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "findById",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-clientes/api/v1/clientes/1",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-clientes",
+														"api",
+														"v1",
+														"clientes",
+														"1"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "findByRazonSocial",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes/by-razonSocial?razonSocial=CLARO",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes",
+														"by-razonSocial"
+													],
+													"query": [
+														{
+															"key": "razonSocial",
+															"value": "CLARO"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "findByRuc",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes/by-ruc?ruc=20544987258",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes",
+														"by-ruc"
+													],
+													"query": [
+														{
+															"key": "ruc",
+															"value": "20544987258"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "save",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n        \"razonSocial\": \"CLARO EMPRESAS v3\",\r\n        \"ruc\": \"20544987260\",\r\n        \"direccion\": \"AV. LARCO 238-SAN ISIDRO\",\r\n        \"telefono\": \"456-4575\",\r\n        \"correo\": \"CONTACTO@CLARO.COM.PE\",\r\n        \"estado\": \"1\"\r\n    }",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update",
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n \"razonSocial\": \"CLARO EMPRESAS v3.1\",\r\n        \"ruc\": \"20544987260\",\r\n        \"direccion\": \"AV. LARCO 238-SAN ISIDRO\",\r\n        \"telefono\": \"456-4575\",\r\n        \"correo\": \"CONTACTO@CLARO.COM.PE\",\r\n        \"estado\": \"1\"\r\n    }",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes/4",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes",
+														"4"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "delete",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8083/api/v1/clientes/4",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8083",
+													"path": [
+														"api",
+														"v1",
+														"clientes",
+														"4"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "ms-negocio-gestion-productos-gateway",
+									"item": [
+										{
+											"name": "findAll",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/MS-NEGOCIO-GESTION-PRODUCTOS-ORACLE/v1/productos",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"MS-NEGOCIO-GESTION-PRODUCTOS-ORACLE",
+														"v1",
+														"productos"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "ms-negocio-gestion-productos-gateway-custom",
+									"item": [
+										{
+											"name": "findAll",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-productos/v1/productos",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-productos",
+														"v1",
+														"productos"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "microservicios-externos",
+							"item": [
+								{
+									"name": "albums",
+									"item": [
+										{
+											"name": "albums",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/albums",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"albums"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "deployments",
+			"item": [
+				{
+					"name": "demo",
+					"item": [
+						{
+							"name": "demo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085"
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "aws",
+					"item": [
+						{
+							"name": "ms-negocio-gestion-productos",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://af3e57c54f05545109239dbffd0fce54-1953679328.sa-east-1.elb.amazonaws.com:8081/v1/productos",
+											"protocol": "http",
+											"host": [
+												"af3e57c54f05545109239dbffd0fce54-1953679328",
+												"sa-east-1",
+												"elb",
+												"amazonaws",
+												"com"
+											],
+											"port": "8081",
+											"path": [
+												"v1",
+												"productos"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "docker",
+					"item": [
+						{
+							"name": "clientes",
+							"item": [
+								{
+									"name": "clientes-8083",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8083/api/v1/clientes",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"v1",
+												"clientes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "clientes-8085",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8085/api/v1/clientes",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"clientes"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GCP",
+					"item": [
+						{
+							"name": "ms-negocio-gestion-clientes",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://35.224.48.192:8083/api/v1/clientes",
+											"protocol": "http",
+											"host": [
+												"35",
+												"224",
+												"48",
+												"192"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"v1",
+												"clientes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "save",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n        \"razonSocial\": \"GALAXY EXPLORER\",\r\n        \"ruc\": \"20544987213\",\r\n        \"direccion\": \"AV. LARCO 213-SAN ISIDRO\",\r\n        \"telefono\": \"456-4577\",\r\n        \"correo\": \"contacto@explorer.galalxy.edu.pe\",\r\n        \"estado\": \"1\"\r\n    }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://34.57.42.194:8083/api/v1/clientes",
+											"protocol": "http",
+											"host": [
+												"34",
+												"57",
+												"42",
+												"194"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"v1",
+												"clientes"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "pocs",
+			"item": [
+				{
+					"name": "mongodb",
+					"item": [
+						{
+							"name": "command",
+							"item": [
+								{
+									"name": "command-data",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9083/v1/pedidos/command",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9083",
+											"path": [
+												"v1",
+												"pedidos",
+												"command"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "command-save",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"idPedido\": 3,\r\n    \"glosa\": \"Pedido de utiles de limpiesa v1\",\r\n    \"fechaRegistro\": \"2024-06-06\",\r\n    \"total\": 2000.0,\r\n    \"cliente\": \"20544987304 -  Comercial Libum S.A.C.\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9083/v1/pedidos/command",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9083",
+											"path": [
+												"v1",
+												"pedidos",
+												"command"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "command-save Copy",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"idPedido\": 1,\r\n    \"glosa\": \"Pedido de equipos de cómputo\",\r\n    \"fechaRegistro\": \"2024-12-21\",\r\n    \"total\": 10000.0,\r\n    \"cliente\": \"20544987304 -  Comercial Hermanos Casa S.A.\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9083/v1/pedidos/command",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9083",
+											"path": [
+												"v1",
+												"pedidos",
+												"command"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "query",
+							"item": [
+								{
+									"name": "query-findAll",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9084/v1/pedidos/query",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9084",
+											"path": [
+												"v1",
+												"pedidos",
+												"query"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "query-findByLikeGlosa",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9084/v1/pedidos/query/by-glosa?glosa=oficina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9084",
+											"path": [
+												"v1",
+												"pedidos",
+												"query",
+												"by-glosa"
+											],
+											"query": [
+												{
+													"key": "glosa",
+													"value": "oficina"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Kafka",
+					"item": [
+						{
+							"name": "producer-data",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9081/v1/pedidos/producer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9081",
+									"path": [
+										"v1",
+										"pedidos",
+										"producer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "producer-send",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":4,\r\n    \"glosa\": \"Pedido de equipos de pesca\",\r\n    \"fechaRegistro\": \"2024-12-14\",\r\n    \"total\": 1000.0,\r\n    \"cliente\": \"20544987305 -  Transportes los Andes S.A.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9081/v1/pedidos/producer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9081",
+									"path": [
+										"v1",
+										"pedidos",
+										"producer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Redis",
+					"item": [
+						{
+							"name": "poc-redis-admin-v1",
+							"item": [
+								{
+									"name": "save",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\":3,\r\n    \"nombreCompleto\":\"Maria Cristina\",\r\n    \"cargo\": \"Vendedor de oficina\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9085/v1/vendedor/admin",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9085",
+											"path": [
+												"v1",
+												"vendedor",
+												"admin"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9085/v1/vendedor/admin",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9085",
+											"path": [
+												"v1",
+												"vendedor",
+												"admin"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "talleres",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:6086/app-redis/talleres",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6086",
+											"path": [
+												"app-redis",
+												"talleres"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "test",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:6086/app-redis/talleres/test",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6086",
+											"path": [
+												"app-redis",
+												"talleres",
+												"test"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "save",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"2\",\r\n    \"nombre\": \"Demo Redis v2\",\r\n    \"descripcion\": \"Redis con Spring Boot 3.0\",\r\n    \"duracion\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:6086/app-redis/talleres",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6086",
+											"path": [
+												"app-redis",
+												"talleres"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

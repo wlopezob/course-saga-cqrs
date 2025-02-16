@@ -1,0 +1,99 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.5'
+	id 'io.spring.dependency-management' version '1.1.4'
+	id 'com.diffplug.eclipse.apt' version '3.37.2'
+}
+
+group = 'pe.edu.galaxy.training.java.sb.ms'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = '21'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates' }
+}
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    springinstrument
+}
+
+
+ext {
+  set('springCloudVersion', "2023.0.3")
+  set('springBootAdminVersion', "3.2.1")
+  set('lombokVersion', "1.18.24")
+}
+
+compileJava {
+  options.compilerArgs << "-Amapstruct.defaultComponentModel=spring"
+}
+
+dependencies {
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+		
+	// Config Client
+	
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	
+	// Health check
+	
+	 implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	 
+	// Eureka Discovery Client
+	
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+	
+			  	
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	// Kafka
+	 implementation 'org.springframework.kafka:spring-kafka'
+	 
+	
+	// Admin
+	implementation 'de.codecentric:spring-boot-admin-starter-client'
+	
+	// Feing
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+	
+	
+	// Lombok
+	
+	compileOnly("org.projectlombok:lombok")
+	annotationProcessor("org.projectlombok:lombok")
+  
+	// Testing
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+	  
+}
+
+dependencyManagement {
+  imports {
+    mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
+  }
+  
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs = [
+            '-Amapstruct.suppressGeneratorTimestamp=true'
+    ]
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

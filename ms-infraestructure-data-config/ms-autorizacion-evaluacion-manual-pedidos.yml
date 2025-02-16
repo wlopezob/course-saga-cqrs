@@ -1,0 +1,58 @@
+server:
+   port: 8092
+      
+# Kafka #
+kafka:
+#  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  bootstrap-servers: localhost:9092
+  topic: 
+#     topic-pedido-resumen: topic-pedido
+#   topic-pedido-resumen: topic-pedido
+    topic-pedido-autorizacion-pendiente-manual: topic-pedido-autorizacion-pendiente-manual
+    topic-pedido-autorizacion-evaluado: topic-pedido-autorizacion-evaluado
+  group:
+     group-pedido-autorizacion-pendiente-manual: group-pedido-autorizacion-pendiente-manual-id
+# Server Admin Client
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+          management-base-url: http://localhost:${server.port:8092}
+
+# Redis
+  data: 
+   redis:
+     database: 0
+     host: localhost
+     port: 6380
+     timeout: 60
+
+# Server Registry Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+
+# Endpoints exposition
+management:
+  endpoints:
+    web:
+     exposure:
+       include: "*"
+     health:
+       show-details: always
+       
+# Feign client         
+feign:
+  client:
+    config:
+      httpBinClient:
+        read-timeout: 2000
+        connect-timeout: 1000
+  circuitbreaker:
+    enabled: true
+    alphanumeric-ids:
+      enabled: true       

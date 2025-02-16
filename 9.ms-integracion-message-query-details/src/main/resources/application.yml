@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ms-integracion-message-query-details
+
+  config:
+    import: optional:configserver:${MS_SERVER_CONFIG:http://localhost:8888}

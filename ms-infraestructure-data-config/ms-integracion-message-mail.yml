@@ -1,0 +1,51 @@
+server:
+  port: 8085
+
+spring:
+  # Server Admin Client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+          management-base-url: http://localhost:${server.port:8085}
+
+## MailProperties
+  mail:
+    host: galaxy.edu.pe
+    port: 587
+    username: demo@galaxy.edu.pe
+    password: ^SVu^@N]f}IF
+    properties:
+      mail:
+        smtp:
+         auth: true
+         starttls:
+           enable: true
+
+# Server Registry Client
+eureka:
+  client:
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8889/eureka
+
+# Endpoints exposition
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      health:
+        show-details: always
+
+# Kafka
+kafka:
+#  bootstrap-servers: localhost:19092,localhost:29092,localhost:39092
+  bootstrap-servers: localhost:9092
+  topic:
+     topic-clientes: topic-clientes
+  group:
+     group-clientes-id: group-clientes-id
+
+

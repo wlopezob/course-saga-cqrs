@@ -1,0 +1,100 @@
+server:
+  port: 8084
+
+spring:
+  # MySQL
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_curs-000261_pedidos?createDatabaseIfNotExist=true&useSSL=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+
+  # Server Admin Client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+          management-base-url: http://localhost:${server.port:8084}
+
+# Server Registry Client
+eureka:
+  client:
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8889/eureka
+
+# Endpoints exposition
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      health:
+        show-details: always
+
+# Feign client
+feign:
+  client:
+    config:
+      httpBinClient:
+        read-timeout: 2000
+        connect-timeout: 1000
+  circuitbreaker:
+    enabled: true
+    alphanumeric-ids:
+      enabled: true
+
+# Resilience4j
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+    instances:
+      HttpBinClientgetBinWithDelayInSecondsint:
+        minimumNumberOfCalls: 10
+        failureRateThreshold: 50
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 20s
+#resilience4j.retry:
+# instances:
+#    backendA:
+#      maxAttempts: 3
+#      waitDuration: 10s
+#      enableExponentialBackoff: true
+#      exponentialBackoffMultiplier: 2
+#      retryExceptions:
+#        - org.springframework.web.client.HttpServerErrorException
+#        - java.io.IOException
+#      ignoreExceptions:
+#        - io.github.robwin.exception.BusinessException
+#    backendB:
+#      maxAttempts: 3
+#      waitDuration: 10s
+#      retryExceptions:
+#        - org.springframework.web.client.HttpServerErrorException
+#        - java.io.IOException
+#      ignoreExceptions:
+#        - io.github.robwin.exception.BusinessException
+
+custom.igv: 0.18
+
+# Microservices Client - Feing
+ms-negocio-gestion-clientes.url: http://localhost:8081/api/v1/clientes
+ms-negocio-gestion-clientes_backup.url: http://localhost:8085/api/v1/clientes
+
+ms-negocio-gestion-productos.url: http://localhost:8082/v1/productos
+
+# Microservices Client - CQRS
+ms-integracion-message-producer.url: http://localhost:8086/v1/pedidos/producer
+
+# Microservices Client - SAGA
+ms-autorizacion-saga-pedidos.url: http://localhost:8090/v1/pedidos/autorizacion
+

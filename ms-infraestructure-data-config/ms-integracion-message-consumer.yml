@@ -1,0 +1,51 @@
+server:
+   port: 8087
+      
+# Kafka #
+kafka:
+#  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  bootstrap-servers: localhost:9092
+  topic: 
+     topic-pedido-resumen: topic-pedido-resumen
+  group:
+     group-pedido-id: group-pedido-id
+# Server Admin Client
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+          management-base-url: http://localhost:${server.port:8087}
+
+# Server Registry Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+
+# Endpoints exposition
+management:
+  endpoints:
+    web:
+     exposure:
+       include: "*"
+     health:
+       show-details: always
+       
+# Feign client - http -restTemplate, WebClient        
+feign:
+  client:
+    config:
+      httpBinClient:
+        read-timeout: 2000
+        connect-timeout: 1000
+  circuitbreaker:
+    enabled: true
+    alphanumeric-ids:
+      enabled: true
+
+# Microservices Client
+ms-integracion-message-command.url: http://localhost:8088/v1/pedidos/command
+       
